@@ -11,7 +11,7 @@ class uploadTest {
       "Thank you for your message. It has been sent."
     );
   }
-
+  //Action
   verifyError() {
     this.resOutput.should(
       "have.text",
@@ -22,22 +22,24 @@ class uploadTest {
   get notValidTip() {
     return cy.get(".wpcf7-not-valid-tip");
   }
-
+  //Action
   verifyTooBig() {
     this.notValidTip.should("have.text", "Uploaded file is too big.");
   }
-
-  verifyBlank(){
-    this.notValidTip.should("have.text", "You are not allowed to upload files of this type.");
+  //Action
+  verifyBlank() {
+    this.notValidTip.should(
+      "have.text",
+      "You are not allowed to upload files of this type."
+    );
   }
 
-  get uploadFile(){
-    return cy.get('#file-upload')
-  } 
-
-  selectFile(text){
-    this.uploadFile.selectFile(text)
+  get uploadFile() {
+    return cy.get("#file-upload");
   }
-  
+  //Action
+  selectFile(text) {
+    this.uploadFile.selectFile(text);
+  }
 }
 export default new uploadTest();
