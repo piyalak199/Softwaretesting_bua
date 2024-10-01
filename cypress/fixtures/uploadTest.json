@@ -1,0 +1,13 @@
+{
+    "file": {
+        "text": "cypress/e2e/4-homework/fileUpload/TC-01.txt",
+        "pdf": "cypress/e2e/4-homework/fileUpload/TC-02.pdf",
+        "docx": "cypress/e2e/4-homework/fileUpload/TC-03.docx",
+        "jpeg": "cypress/e2e/4-homework/fileUpload/TC-04.jpeg",
+        "jpg": "cypress/e2e/4-homework/fileUpload/TC-05.jpg",
+        "png": "cypress/e2e/4-homework/fileUpload/TC-06.png",
+        "gif": "cypress/e2e/4-homework/fileUpload/TC-07.gif",
+        "max": "cypress/e2e/4-homework/fileUpload/TC-09.pdf",
+        "other": "cypress/e2e/4-homework/fileUpload/TC-10.xlsx"
+    }
+}

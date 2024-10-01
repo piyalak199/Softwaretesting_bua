@@ -1,3 +1,4 @@
+const dataUploadFile = require("../../fixtures/uploadTest.json");
 import uploadTest from "../../support/page_object/uploadTest";
 
 describe("uploadTest", () => {
@@ -6,37 +7,37 @@ describe("uploadTest", () => {
   });
 
   it("tc-01", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-01.txt");
+    cy.get('#file-upload').selectFile(dataUploadFile.file.text)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-02", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-02.pdf")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.pdf)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-03", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-03.docx")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.docx)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-04", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-04.jpeg")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.jpeg)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-05", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-05.jpg")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.jpg)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-06", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-06.png")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.png)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-07", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-07.gif")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.gif)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
@@ -45,11 +46,11 @@ describe("uploadTest", () => {
     uploadTest.verifyError();
   });
   it("tc-09", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-09.pdf")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.max)
     uploadTest.verifyTooBig();
   });
   it("tc-10", () => {
-    cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-10.xlsx")
+    cy.get('#file-upload').selectFile(dataUploadFile.file.other)
     cy.get("#upload-btn").click()
     uploadTest.verifyBlank();
     uploadTest.verifyError();
