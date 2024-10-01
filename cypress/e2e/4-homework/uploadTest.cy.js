@@ -7,37 +7,37 @@ describe("uploadTest", () => {
   });
 
   it("tc-01", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.text)
+    uploadTest.selectFile(dataUploadFile.file.text)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-02", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.pdf)
+    uploadTest.selectFile(dataUploadFile.file.pdf)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-03", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.docx)
+    uploadTest.selectFile(dataUploadFile.file.docx)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-04", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.jpeg)
+    uploadTest.selectFile(dataUploadFile.file.jpeg)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-05", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.jpg)
+    uploadTest.selectFile(dataUploadFile.file.jpg)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-06", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.png)
+    uploadTest.selectFile(dataUploadFile.file.png)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
   it("tc-07", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.gif)
+    uploadTest.selectFile(dataUploadFile.file.gif)
     cy.get("#upload-btn").click();
     uploadTest.verifySucessUpload()
   });
@@ -46,11 +46,11 @@ describe("uploadTest", () => {
     uploadTest.verifyError();
   });
   it("tc-09", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.max)
+    uploadTest.selectFile(dataUploadFile.file.max)
     uploadTest.verifyTooBig();
   });
   it("tc-10", () => {
-    cy.get('#file-upload').selectFile(dataUploadFile.file.other)
+    uploadTest.selectFile(dataUploadFile.file.other)
     cy.get("#upload-btn").click()
     uploadTest.verifyBlank();
     uploadTest.verifyError();

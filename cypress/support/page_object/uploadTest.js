@@ -31,5 +31,13 @@ class uploadTest {
     this.notValidTip.should("have.text", "You are not allowed to upload files of this type.");
   }
 
+  get uploadFile(){
+    return cy.get('#file-upload')
+  } 
+
+  selectFile(text){
+    this.uploadFile.selectFile(text)
+  }
+  
 }
 export default new uploadTest();

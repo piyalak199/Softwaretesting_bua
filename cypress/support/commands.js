@@ -30,7 +30,3 @@ Cypress.Commands.add("login", (username, password) => {
   cy.get("#submit").click();
 })
 
-// Cypress.Commands.add("uploadTest", () => {
-//   cy.get('#file-upload').selectFile("cypress/e2e/4-homework/fileUpload/TC-01.txt");
-//   cy.get("#upload-btn").click()
-// })
